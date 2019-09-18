@@ -1,0 +1,76 @@
+.products {
+    padding: 175px 0 100px 0;
+    background: $background-grey-2;
+    box-sizing: border-box;
+    h2 {
+        margin: 0 0 80px 0;
+    }
+
+    article {
+        .col-2{
+            width: calc(50% - 86px);
+            float: left;
+            padding: 0 85px 0 0;
+            &:first-child{
+              border-right: 1px solid $background-grey-1;   
+            }
+//            &:first-child{
+//                position: relative;
+//                &::after{
+//                    display: block;
+//                    content: "";
+//                    position: absolute;
+//                    border-right: 1px solid $background-grey-1;
+//                    top: 0;
+//                    right: 0;
+//                    height: 100%;
+//                    width: 100%;
+//                }
+//            }
+            &+.col-2{
+                padding: 0 0 0 85px;
+            }
+        }
+        @include clear;
+
+        div {
+            h3 {
+                & + p {
+                    margin: 20px 0 0 0;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+@include mobile{
+    .products{
+        padding: 130px 0 70px;
+        text-align: center;
+        
+        article{
+            .col-2{
+                float: none;
+                width: 100%;
+                padding: 0 0 40px;
+                text-align: left;
+                h3{
+                    text-align: center;
+                    margin: 0 0 40px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                &+.col-2{
+                    padding: 40px 0 0;
+                }
+                &:first-child{
+                    border-right: none;
+                    border-bottom: 1px solid $background-grey-1;
+                }
+            }
+        }
+    }
+}

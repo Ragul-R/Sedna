@@ -1,0 +1,113 @@
+.hero {
+    text-align: center;
+    background: url('../images/hero.jpg') no-repeat center;
+    background-size: cover;
+    height: 750px;
+    position: relative;
+    color: $white;
+
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        background: $mask;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-content {
+        @include center;
+        max-width: 700px;
+        width: 100%;
+        font-size: 0;
+
+        h1 {
+            font-family: 'OpenSans Regular';
+            font-size: 60px;
+            text-transform: capitalize;
+        }
+
+        p {
+            margin: 15px 0 84px 0;
+            max-width: 829px;
+            font-size: 20px;
+            line-height: 1.5;
+            max-height: 100px;
+            overflow: hidden;
+            color: $white;
+        }
+
+        button {
+            @extend %rnd-btn;
+            min-width: 200px;
+            height: 55px;
+
+            &:first-of-type {
+                background: $primary-color;
+                color: $white;
+
+                &:hover {
+                    background: none;
+                    color: $primary-color;
+                }
+            }
+
+            & + button {
+                margin: 0 0 0 20px;
+            }
+        }
+    }
+}
+@include tablet {
+    .hero {
+        &-content {
+            max-width: 610px;
+            width: 100%;
+            h1 {
+                font-size: 52px;
+            }
+
+            p {
+                font-size: 18px;
+                margin-top: 25px;
+            }
+
+            button {
+                font-size: 14px;
+                min-width: 170px;
+                display: block;
+                margin: auto;
+                height: 50px;
+                
+                + button {
+                    margin: 20px auto 0;
+                }
+            }
+        }
+    }
+}
+@include mobile {
+    .hero {
+        &-content {
+            max-width: 300px;
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@include screen2x{
+    .hero{
+        background: url(../images/hero@2x.jpg) no-repeat center;
+    }
+}

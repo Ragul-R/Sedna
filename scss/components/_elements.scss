@@ -1,0 +1,54 @@
+ul,li{
+    display: inline-block;
+}
+a{
+    color: $white;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'OpenSans Regular', Helvetica, Arial;
+    line-height: 30px;
+}
+button{
+    border: none;
+    background: none;
+    color: $primary-color;
+    font-size: 13px; 
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    font-family: 'OpenSans Light', Helvetica, Arial;
+    
+    &:focus{
+        box-shadow: 0px 0px 2px 2px $primary-color;
+    }
+}
+h2{
+    font-size: 24px;
+    font-family: 'OpenSans Regular', Helvetica, Arial;
+    color: $sub-heading1-color;
+    line-height: 32px;
+}
+h3{
+    font-family: 'OpenSans SemiBold', Helvetica, Arial;
+    text-transform: uppercase;
+    color: $sub-heading1-color;
+}
+h4{
+    font-family: 'OpenSans Light', Helvetica, Arial;
+    font-size: 40px;
+    color: $white;
+    -webkit-font-smoothing: antialiased;
+}
+h5{
+    font-family: 'OpenSans Light', Helvetica, Arial;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: $sub-heading2-color;
+    text-transform: uppercase;
+}
+p{
+    font-family: 'OpenSans Light', Helvetica, Arial;
+    font-size: 15px;
+    line-height: 25px;
+    color: $text-color;
+}

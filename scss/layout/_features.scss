@@ -1,0 +1,125 @@
+.features {
+    padding: 120px 0;
+    box-sizing: border-box;
+
+    &-list {
+        li {
+            width: calc(33.33% - 80px);
+            font-size: 15px;
+            padding: 0 0 0 64px;
+            position: relative;
+
+            &:nth-child(3n-1) {
+                margin: 0 20px;
+
+                &::before {
+                    @include icon;
+                    content: "\e902";
+                    position: absolute;
+                    left: 0;
+                    font-size: 40px;
+                    color: $primary-color;
+                }
+            }
+
+            h3 {
+                margin: 0 0 10px 0;
+            }
+
+            p {
+                line-height: 25px;
+                color: $text-color;
+            }
+
+            &:first-child::before {
+                @include icon;
+                content: "\e903";
+                position: absolute;
+                left: 0;
+                font-size: 40px;
+                color: $primary-color;
+            }
+
+            &:last-child::before {
+                @include icon;
+                content: "\e904";
+                position: absolute;
+                left: 0;
+                font-size: 40px;
+                color: $primary-color;
+            }
+
+        }
+    }
+}
+@include desktop {
+    .features {
+        &-list {
+            li {
+                max-height: 140px;
+
+                h3 {
+                    min-height: 30px;
+                }
+
+                p {
+                    max-height: 150px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .features {
+        &-list {
+            h3 {
+                min-height: 30px;
+                margin: 0 0 20px;
+            }
+
+            p {
+                max-height: 175px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .features {
+        padding: 70px 0;
+        &-list {
+            li {
+                width: 100%;
+                padding: 60px 0 0;
+                text-align: center;
+    
+                &:nth-child(3n-1) {
+                    margin: 40px 0;
+                }
+
+                &:first-child,
+                &:last-child,
+                &:nth-child(3n-1) {
+                    &::before {
+                        @include center(true, false);
+                        top: 0;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 20px;
+                    max-width: 450px;
+                    max-height: 75px;
+                    margin: auto;
+                    overflow: hidden;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+

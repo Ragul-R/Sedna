@@ -1,0 +1,57 @@
+.container{
+    max-width: 1060px;
+    margin:0 auto;
+}
+
+.down-arrow{
+    width: 15px;
+    height: 15px;
+    border:solid $white;
+    display: inline-block;
+    position: absolute;
+    bottom: 30px;
+    transform: rotate(45deg);
+    border-width: 0 2px 2px 0;
+}
+.up-arrow{
+    width: 15px;
+    height: 15px;
+    border:solid $white;
+    display: inline-block;
+    transform: rotate(225deg);
+    border-width: 0 2px 2px 0;
+}
+.right-arrow{
+    width: 6px;
+    height: 6px;
+    border:solid $background-dark-grey;
+    display: inline-block;
+    transform: rotate(45deg);
+    border-width:2px 2px 0 0;
+}
+%rnd-btn {
+    border: 2px solid $primary-color;
+    border-radius: 40px;
+    transition: ease 200ms;
+
+    &:hover {
+        background: $primary-color;
+        color: $white;
+    }
+}
+
+@include desktop{
+   .container{
+        width: calc(100% - 250px);
+    } 
+}
+@include tablet{
+   .container{
+        width: calc(100% - 110px);
+    } 
+}
+@include mobile{
+   .container{
+        width: calc(100% - 100px);
+    } 
+}

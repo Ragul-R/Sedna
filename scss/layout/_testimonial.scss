@@ -1,0 +1,202 @@
+.testimonial {
+    .slider {
+        &-item {
+            background: url('../images/carousel.jpg') no-repeat center;
+            background-size: cover;
+            height: 500px;
+            width: 100%;
+
+            &-content {
+                text-align: center;
+                @include center;
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    margin: 0 auto 28px;
+                    border-radius: 50%;
+                    border: 3px solid $white;
+                }
+
+                figcaption {
+                    h4 {
+                        font-style: italic;
+                        margin: 0 0 28px;
+                    }
+                }
+            }
+        }
+
+        .owl-nav {
+
+            .owl-prev,
+            .owl-next {
+                @include center(false, true);
+                font-size: 60px;
+                color: $background-grey-1;
+
+                &:hover {
+                    background: none;
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    height: 40px;
+                    width: 40px;
+                    border: solid $background-grey-2;
+                    transform: rotate(45deg);
+                }
+
+                span {
+                    display: none;
+                }
+            }
+
+            .owl-prev {
+                left: 0;
+                margin-left: 60px;
+
+                &::before {
+                    border-width: 0 0 3px 3px;
+                }
+            }
+
+            .owl-next {
+                right: 0;
+                margin-right: 60px;
+
+                &::before {
+                    border-width: 3px 3px 0 0;
+                }
+            }
+        }
+
+        .owl-dots {
+            bottom: 30px;
+            @include center(true, false);
+
+            .owl-dot {
+                span {
+                    height: 12px;
+                    width: 12px;
+                    background: $dots-color;
+                    border: 2px solid $dots-color;
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            .owl-dot.active {
+                span {
+                    background: none;
+                    border: 2px solid $white;
+                }
+            }
+        }
+    }
+}
+@include tablet{
+    .testimonial{
+        .slider{
+            &-item{
+                &-content{
+                    figcaption{
+                        h4{
+                            font-size: 32px;
+                        }
+                        h5{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .owl-nav{
+                .owl-next,.owl-prev{
+                    &::before{
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+                .owl-next{
+                    margin-right: 30px; 
+                }
+                .owl-prev{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+@include desktop{
+    .testimonial{
+        .slider{
+            &-item{
+                &-content{
+                    figcaption{
+                        h4{
+                            font-size: 34px;
+                        }
+                        h5{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .owl-nav{
+                .owl-next,.owl-prev{
+                    &::before{
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+                .owl-next{
+                    margin-right: 30px; 
+                }
+                .owl-prev{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}
+@include mobile{
+    .testimonial{
+        .slider{
+            &-item{
+                &-content{
+                    figcaption{
+                        h4{
+                            font-size: 24px;
+                        }
+                        h5{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            .owl-nav{
+                .owl-next,.owl-prev{
+                    &::before{
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+                .owl-next{
+                    margin-right: 30px; 
+                }
+                .owl-prev{
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}

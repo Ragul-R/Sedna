@@ -1,0 +1,50 @@
+@mixin clear {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+@mixin center($x:true, $y:true) {
+    position: absolute;
+    @if ($x and $y){
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    @else if($x){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @else if($y){
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin screen2x{
+    @media 
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-moz-device-pixel-ratio: 2),
+        only screen and (-0-min-device-pixel-ratio: 2),
+        only screen and (min-device-pixel-ratio: 2){
+            @content;
+    }
+}
+
+@mixin desktop{
+    @media only screen and (max-width: #{$desktop-breakpoint}){
+        @content;
+    }
+}
+@mixin tablet{
+    @media only screen and (max-width: #{$tab-breakpoint}){
+        @content;
+    }
+}
+@mixin mobile{
+    @media only screen and (max-width: #{$mobile-breakpoint}){
+        @content;
+    }
+}

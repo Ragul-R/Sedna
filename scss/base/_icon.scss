@@ -1,0 +1,67 @@
+@mixin icon{
+    font-family: 'Icon' !important;
+    font-size: 100%;
+    font-style: normal;
+    text-transform: none;
+    font-weight: normal;
+}
+.icon-profile{
+    @include icon;
+    &::before{
+     content: "\e905";   
+    }
+}
+.icon-genius{
+    @include icon;
+    &::before{
+     content: "\e904";   
+    }
+}
+.icon-breaker{
+    @include icon;
+    &::before{
+     content: "\e900";   
+    }
+}
+.icon-recycle{
+    @include icon;
+    &::before{
+     content: "\e901";   
+    }
+}
+.icon-bulb{
+    @include icon;
+    &::before{
+     content: "\e902";   
+    }
+}
+.icon-pensil_rule{
+    @include icon;
+    &::before{
+     content: "\e903";   
+    }
+}
+.icon-lock{
+    @include icon;
+    &::before{
+     content: "\f023";   
+    }
+}
+.icon-twitter{
+    @include icon;
+    &::before{
+     content: "\f099";   
+    }
+}
+.icon-facebook-f{
+    @include icon;
+    &::before{
+     content: "\f09a";   
+    }
+}
+.icon-msg{
+    @include icon;
+    &::before{
+     content: "\f0e0";   
+    }
+}

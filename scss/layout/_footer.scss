@@ -1,0 +1,201 @@
+footer {
+    background: linear-gradient(to right, $footer-color 0%, $footer-color 60%, $footer-social-color 60%, $footer-social-color 100%);
+    position: relative;
+
+
+    .footer-top {
+        background: $footer-top-color;
+
+        a {
+            background: $footer-color;
+            float: right;
+            width: 60px;
+            line-height: 60px;
+            text-align: center;
+
+            span {
+                height: 12px;
+                width: 12px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        & + .container {
+            padding: 120px 0;
+        }
+
+        @include clear;
+    }
+
+    //Nav
+    .container {
+        z-index: 10;
+
+        .footer-nav {
+            width: 60%;
+            float: left;
+
+            ul {
+                border-top: 2px solid rgba($white, .4);
+                padding: 27px 0 0 0;
+                font-size: 0;
+
+                li {
+                    a {
+                        text-transform: uppercase;
+                        font-size: 13px;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+
+                    + li {
+                        a {
+                            margin: 0 0 0 30px;
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: $white;
+                font-family: 'OpenSans Light';
+                max-width: 257px;
+                margin: 30px 0 0 0;
+
+                span {
+                    font-family: 'OpenSans SemiBold';
+                }
+            }
+        }
+
+        .footer-social {
+            box-sizing: border-box;
+            float: right;
+            width: 30%;
+            color: $white;
+
+            p {
+                margin: 30px 0;
+                color: $white;
+                text-transform: uppercase;
+            }
+
+            a {
+                width: 50px;
+                vertical-align: middle;
+                line-height: 50px;
+                text-align: center;
+                transition: background ease .5s;
+
+                + a {
+                    margin-left: 20px;
+                }
+            }
+
+            .twitter {
+                background: $twitter-color;
+                border: 2px solid $twitter-color;
+
+                &:hover {
+                    color: $twitter-color;
+                    background: $white;
+                    border: 2px solid $twitter-color;
+                }
+            }
+
+            .facebook {
+                background: $facebook-color;
+                border: 2px solid $facebook-color;
+
+                &:hover {
+                    color: $facebook-color;
+                    background: $white;
+                }
+            }
+        }
+
+        @include clear;
+    }
+}
+
+@include desktop {
+    footer {
+        .container {
+            .footer-nav {
+                ul {
+                    li {
+                        & + li {
+                            a {
+                                margin: 0 0 0 20px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    footer {
+        .footer-top {
+            a {
+                width: 30px;
+                line-height: 30px;
+
+                span {
+                    height: 7px;
+                    width: 7px;
+                }
+            }
+        }
+
+        .container {
+            .footer-nav {
+                ul {
+                    padding: 0;
+                    border-top: none;
+
+                    li {
+                        display: block;
+
+                        a {
+
+                            font-size: 12px;
+                        }
+
+                        & + li {
+                            a {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    max-width: 150px;
+                    font-size: 12px;
+                }
+            }
+
+            .footer-social {
+                p {
+                    font-size: 12px;
+                }
+
+                a {
+                    width: 25px;
+                    line-height: 25px;
+
+                    + a {
+                        margin:0;
+                    }
+                }
+            }
+        }
+    }
+}

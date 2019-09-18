@@ -1,0 +1,72 @@
+.design{
+    padding: 120px 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    &-content {
+        width: 50%;
+
+        h2 {
+            margin: 0 0 20px;
+        }
+
+        p + p {
+            margin: 30px 0 0 0;
+            
+            span{
+                color: $span-color;
+            }
+        }
+        
+        button{
+            @extend %rnd-btn;
+            padding: 10px 30px;
+            margin: 60px 0 0 0;
+        }
+    }
+
+    figure {
+        position: absolute;
+        right: 0;
+        top: 120px;
+        max-width: 520px;
+        img{
+            width: 100%;
+        }
+    }
+}
+@include tablet{
+    .design{
+        padding: 70px 0;
+        
+        figure{
+            z-index: -1;
+            max-width: 400px;
+        }
+    }
+}
+@include mobile{
+    .design{
+        text-align: center;
+        &-content{
+            width: 100%;
+            h2{
+                margin: 0 0 30px;
+            }
+            p{
+                text-align: left;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            button{
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+        }
+        
+        figure{
+            display: none;
+        }
+    }
+}

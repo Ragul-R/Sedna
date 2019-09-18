@@ -1,0 +1,54 @@
+@font-face{
+    font-family: 'OpenSans Regular';
+    src: url('../font/Regular/OpenSans-Regular.eot');
+    src: url('../font/Regular/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Regular/OpenSans-Regular.woff') format('woff'),
+        url('../font/Regular/OpenSans-Regular.woff2') format('woff2'),
+        url('../font/Regular/OpenSans-Regular.ttf') format('truetype'),
+        url('../font/Regular/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'OpenSans Bold';
+    src: url('../font/Bold/OpenSans-Bold.eot');
+    src: url('../font/Bold/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/Bold/OpenSans-Bold.woff') format('woff'),
+        url('../font/Bold/OpenSans-Bold.woff2') format('woff2'),
+        url('../font/Bold/OpenSans-Bold.ttf') format('truetype'),
+        url('../font/Bold/OpenSans-Bold.svg#OpenSans-Regular') format('svg');
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'OpenSans Light';
+    src: url('../font/Light/OpenSans-Light.eot');
+    src: url('../font/Light/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../font/Light/OpenSans-Light.woff') format('woff'),
+        url('../font/Light/OpenSans-Light.woff2') format('woff2'),
+        url('../font/Light/OpenSans-Light.ttf') format('truetype'),
+        url('../font/Light/OpenSans-Light.svg#OpenSans-Regular') format('svg');
+    font-style: normal;
+}
+   
+@font-face{
+    font-family: 'OpenSans SemiBold';
+    src: url('../font/SemiBold/OpenSans-SemiBold.eot');
+    src: url('../font/SemiBold/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/SemiBold/OpenSans-SemiBold.woff') format('woff'),
+        url('../font/SemiBold/OpenSans-SemiBold.woff2') format('woff2'),
+        url('../font/SemiBold/OpenSans-SemiBold.ttf') format('truetype'),
+        url('../font/SemiBold/OpenSans-SemiBold.svg#OpenSans-Regular') format('svg');
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Icon';
+    src: url('../font/icon/icon.eot');
+    src: url('../font/icon/icon.eot?#iefix')format('embedded-opentype'),
+        url('../font/icon/icon.woff') format('woff'),
+        url('..font/icon/icon.ttf') format('truetype'),
+        url('..font/icon/icon.svg#icon') format('svg');
+    font-style: normal;
+    
+}
